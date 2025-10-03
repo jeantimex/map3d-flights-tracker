@@ -1,0 +1,29 @@
+{
+  "name": "map3d-flights-tracker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeantimex/map3d-flights-tracker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/jeantimex/map3d-flights-tracker/issues"
+  },
+  "homepage": "https://github.com/jeantimex/map3d-flights-tracker#readme",
+  "devDependencies": {
+    "vite": "^6.3.6"
+  },
+  "dependencies": {
+    "@googlemaps/js-api-loader": "^2.0.1"
+  }
+}
