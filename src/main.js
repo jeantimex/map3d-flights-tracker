@@ -14,11 +14,12 @@ async function init() {
       mode: "HYBRID",
   });
 
-  // Create flight instances
-  const flight1 = new Flight(flights[0], Model3DElement, Polyline3DElement, AltitudeMode);
-  const flight2 = new Flight(flights[1], Model3DElement, Polyline3DElement, AltitudeMode);
-
-  const allFlights = [flight1, flight2];
+  // Create 10 flight instances
+  const allFlights = [];
+  for (let i = 0; i < 10; i++) {
+    const flight = new Flight(flights[i], Model3DElement, Polyline3DElement, AltitudeMode);
+    allFlights.push(flight);
+  }
 
   document.body.append(map);
 

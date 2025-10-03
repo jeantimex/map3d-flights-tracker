@@ -42,8 +42,9 @@ export class Flight {
 
     // Animation state
     this.animationProgress = 0;
-    this.animationDuration = 5000; // 5 seconds
-    this.waitDuration = 2000; // 2 seconds wait
+    // Use random speed between 2-8 seconds for animation duration
+    this.animationDuration = Math.random() * 6000 + 2000; // 2-8 seconds
+    this.waitDuration = 500; // 0.5 seconds wait
     this.startTime = null;
     this.currentPhase = 'flying-to-arrival';
     this.isReverse = false;

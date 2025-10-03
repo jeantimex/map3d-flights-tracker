@@ -4,7 +4,7 @@ export class Plane {
       src: '/plane.glb',
       position: initialPosition,
       orientation: { heading: initialHeading, tilt: 270, roll: 90 },
-      scale: 20000,
+      scale: 10000,
       altitudeMode: "ABSOLUTE",
     });
   }
