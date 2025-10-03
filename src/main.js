@@ -3,6 +3,7 @@ import { flights } from './Data.js'
 import { Flight } from './Flight.js'
 import { setOptions, importLibrary } from "@googlemaps/js-api-loader";
 import { GUI } from 'dat.gui';
+import Stats from 'stats.js';
 
 async function init() {
   // Set the options for loading the API.
@@ -46,6 +47,15 @@ async function init() {
 
   document.body.append(map);
 
+  // Setup Stats.js for FPS monitoring
+  const stats = new Stats();
+  stats.showPanel(0); // 0: fps, 1: ms, 2: mb, 3+: custom
+  stats.dom.style.position = 'absolute';
+  stats.dom.style.left = '0px';
+  stats.dom.style.top = '0px';
+  stats.dom.style.zIndex = '100';
+  document.body.appendChild(stats.dom);
+
   // Setup dat.GUI
   const gui = new GUI();
   gui.add(params, 'numberOfFlights', 1, 500, 1)
@@ -63,9 +73,13 @@ async function init() {
      });
 
   function animate(currentTime) {
+    stats.begin();
+
     allFlights.forEach(flight => {
       flight.update(currentTime);
     });
+
+    stats.end();
     requestAnimationFrame(animate);
   }
 
