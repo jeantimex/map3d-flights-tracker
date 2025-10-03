@@ -24,6 +24,7 @@
     "vite": "^6.3.6"
   },
   "dependencies": {
-    "@googlemaps/js-api-loader": "^2.0.1"
+    "@googlemaps/js-api-loader": "^2.0.1",
+    "dat.gui": "^0.7.9"
   }
 }
