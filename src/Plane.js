@@ -1,7 +1,7 @@
 export class Plane {
   constructor(Model3DElement, initialPosition, initialHeading) {
     this.model = new Model3DElement({
-      src: '/plane.glb',
+      src: './plane.glb',
       position: initialPosition,
       orientation: { heading: initialHeading, tilt: 270, roll: 90 },
       scale: 10000,
